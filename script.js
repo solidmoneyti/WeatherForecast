@@ -93,12 +93,24 @@ $(document).ready(function () {
     }
 
     function updateForecastSection(selectedForecastData) {
+
+        var forecasthead = $('<div>').addClass('forecast-header');
+
+        var forecastheader = $('<h3>').text(`5-Day Forecast`);
+        forecasthead.append(forecastheader);
+
         // Get the #forecast section element
         var forecastSection = $('#forecast');
 
         // Clear the existing content
         forecastSection.empty();
 
+        var forecasthead = $('<div>').addClass('forecast-header');
+
+        var forecastheader = $('<h3>').text(`5-Day Forecast`);
+        forecasthead.append(forecastheader);
+        forecastSection.append(forecasthead);
+        
         // Create a Bootstrap row to hold the forecast cards
         var $forecastRow = $('<div>').addClass('row');
 
